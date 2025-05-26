@@ -1,0 +1,39 @@
+micronaut:
+  application:
+    name: demo
+#datasources:
+#  default:
+#    driverClassName: org.postgresql.Driver
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5431/fruits
+#    username: fruits
+#    password: fruits
+##    schema-generate: NONE
+#    create-schemas: true
+#    dialect: POSTGRES
+#    db-type: postgres
+#flyway:
+#  datasources:
+#    default:
+#      enabled: true
+##      baseline-version: 0
+##      baseline-on-migrate: true
+#      locations: classpath:db/migration
+r2dbc:
+  datasources:
+    default:
+      #schema-generate: CREATE_DROP
+      schema-generate: NONE
+      dialect: POSTGRES
+      db-type: postgres
+      driver-class-name: org.postgresql.Driver
+      url: r2dbc:postgresql://localhost:5431/fruits
+      username: fruits
+      password: fruits
+
+jackson:
+  serialization:
+    indentOutput: true
+    writeDatesAsTimestamps: false
+  deserialization:
+    failOnUnknownProperties: false

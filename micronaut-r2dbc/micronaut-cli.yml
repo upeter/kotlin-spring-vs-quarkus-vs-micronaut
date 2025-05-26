@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.example
+testFramework: kotest
+sourceLanguage: kotlin
+buildTool: maven
+features: [annotation-api, app-name, data, data-r2dbc, http-client, jackson-databind, kotest, kotlin, kotlin-application, kotlin-extension-functions, logback, maven, mockk, netty-server, postgres, r2dbc, readme, shade, test-resources, yaml]
